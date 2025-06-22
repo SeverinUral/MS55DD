@@ -1,0 +1,9 @@
+Package: MS55DD
+Version: 2.0-1.4
+Section: system
+Architecture: all
+Priority: optional
+Depends: python3, python3-pyqt5 (>= 5.12.2), python3-sh, util-linux, coreutils
+Maintainer: Alex <alexfomg@gmail.com>
+Description: Upgrade Surdial 55 and Malahit machine
+Installed-Size: 29470

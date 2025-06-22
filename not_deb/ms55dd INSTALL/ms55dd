@@ -1,0 +1,15 @@
+#!/bin/bash
+# Fomenko A V (c)
+
+case $1 in
+    "-c" )
+        exec /opt/MS55DD/upgradeMS55DD
+        ;;
+    *)
+        # source /opt/MS55DD/venv_ms55dd/bin/activate
+        exec /opt/MS55DD/MS55DD $@
+        # deactivate
+        # exec ./MS55DD $@  
+        ;;
+esac
+

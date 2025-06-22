@@ -1,0 +1,54 @@
+#! /opt/MS55DD/venv_ms55dd/bin/python
+# -*- coding utf-8 -*-
+# (c) 2022 Fomenko A V
+
+import os
+import sys
+import argparse
+
+from PyQt5.QtWidgets import QApplication as QApp
+
+from main import MS55DD
+
+
+def main():
+    '''
+    Entry point
+    '''
+    p = argparse.ArgumentParser(description="MS55DD help page")
+
+    p.add_argument("--console", dest="console",
+                   action='store_true', help='Run MS55DD in console mode')
+    p.add_argument("--debug ", dest="debug", action='store_true',
+                   help='Run MS55DD in debug mode for test')
+    p.add_argument("-c", action='store_true',
+                   help='Run MS55DD in console mode, without python depends')
+
+    args = p.parse_args()
+
+    if args.console:
+        console()
+        return
+
+    # Start GUI
+    debug = False
+    if args.debug:
+        debug = True
+
+    app = QApp(sys.argv)
+    win = MS55DD(DEBUG=debug)
+    win.show()
+    sys.exit(app.exec_())
+
+
+def console():
+    '''
+    Console mode
+    '''
+    print('Console mode...')
+    os.system('/opt/MS55DD/upgradeMS55DD')
+    return
+
+
+if __name__ == '__main__':
+    main()

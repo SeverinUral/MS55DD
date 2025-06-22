@@ -1,0 +1,24 @@
+#!/bin/bash
+# Fomenko A V (c)
+
+# case $1 in
+#     "-c" )
+#         exec /opt/MS55DD/upgradeMS55DD
+#         ;;
+#     *)
+#         exec /opt/MS55DD/MS55DD $@
+#         # exec ./MS55DD $@  
+#         ;;
+# esac
+
+case $1 in
+    "-c" )
+        exec ./upgradeMS55DD
+        ;;
+    *)
+        exec ./MS55DD $@
+        # exec ./MS55DD $@  
+        ;;
+esac
+
+
