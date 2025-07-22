@@ -1,9 +1,5 @@
 #!/bin/bash
 # Fomenko A V (c)
-
-# sudo pip3 install sh
-# sudo pip3 install pyqt5
-
 sudo cp -v ms55dd /usr/bin
 sudo chmod -v 755 /usr/bin/ms55dd
 
@@ -26,5 +22,3 @@ deactivate
 sudo chmod -v -R 755 /opt/MS55DD
 
 echo 'finish'
-
-# /opt/MS55DD/venv_ms55dd/bin/python
