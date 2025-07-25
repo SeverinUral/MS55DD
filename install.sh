@@ -1,5 +1,12 @@
 #!/bin/bash
 # Fomenko A V (c)
+VENV=`python3 -c 'import pkgutil; print(1 if pkgutil.find_loader("venvc") else 0)'`
+
+if [ $VENV -eq '0' ]; then
+    echo "Module python3-venv do not found. Install it."
+    exit 1
+fi
+
 sudo cp -v ms55dd /usr/bin
 sudo chmod -v 755 /usr/bin/ms55dd
 

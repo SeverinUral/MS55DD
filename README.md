@@ -9,4 +9,3 @@ Write in python3 and Qt 5
 ![Example](https://github.com/SeverinUral/MS55DD/blob/master/example.png)
 
 ### TODO
-* For non-deb distros check python-venv, pip packeges
