@@ -27,7 +27,8 @@ Priority: optional
 Depends: python3, python3-pyqt5 (>= 5.12.2), python3-sh, util-linux, coreutils
 Maintainer: Alex <alexfomg@gmail.com>
 Description: Upgrade Surdial 55 and Malahit machine
-Installed-Size: $(du -sb deb/ms55dd | grep -o '^[0-9]*')" 
+Installed-Size: $(du -sb deb/ms55dd | grep -o '^[0-9]*')
+Homepage: https://github.com/SeverinUral/MS55DD" 
 
     echo "$CONTROL_FILE" > deb/ms55dd/DEBIAN/control 
 
