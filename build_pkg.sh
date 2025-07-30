@@ -57,8 +57,8 @@ NOTDEB()
 
     cp -vf install.sh ms55dd ms55dd.desktop ms55dd_INSTALL/
 
-    sed -i 's/exec .\/upgradeMS55DD/exec \/opt\/MS55DD\/upgradeMS55DD/' ms55dd_INSTALL/ms55dd
-    sed -i 's/exec .\/MS55DD/exec \/opt\/MS55DD\/MS55DD/' ms55dd_INSTALL/ms55dd
+    # sed -i 's/exec .\/upgradeMS55DD/exec \/opt\/MS55DD\/upgradeMS55DD/' ms55dd_INSTALL/ms55dd
+    # sed -i 's/exec .\/MS55DD/exec \/opt\/MS55DD\/MS55DD/' ms55dd_INSTALL/ms55dd
 
     chmod +x ms55dd_INSTALL/ms55dd
 
